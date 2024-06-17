@@ -1,0 +1,86 @@
+@use "sass:map";
+
+.application {
+  background-image: url($base-assets-path + "images-svg/clouds.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 141px 0;
+  
+  .container {
+    max-width: map-get($containers, "container-md");
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  &__wraper {
+    background-image: url($base-assets-path + "about.png");
+
+    &-title {
+      text-align: center;
+      margin-bottom: 92px;
+      
+      h6 {
+        font-family: $secondary-font-family;
+        font-weight: map-get($font-weight, "medium");
+        font-size: map-get($font-size, "xs");
+        color: map-get($colors, "headers-color");
+        margin-bottom: 20px;
+      }
+
+      h3 {
+        font-weight: map-get($font-weight, "medium");
+        font-size: map-get($font-size, "xl");
+        color: map-get($colors, "headers-color");
+      }
+    }
+
+    &-app {
+      @include flex-gap(67px, true);
+      flex-wrap: wrap;
+      margin-bottom: 92px;
+    }
+
+    &__app-carts {
+      @extend %flex-colum;
+      align-items: center;
+      @include flex-gap(33px, false);
+      flex: 18%;
+
+      a:hover circle {
+        fill: map-get($colors, "light-color");
+      }
+      
+      h6 {
+        font-weight: map-get($font-weight, "bold");
+        font-size: map-get($font-size, "sm");
+        color: map-get($colors, "title-color");
+      }
+
+      p {
+        max-width: 140px;
+        font-weight: map-get($font-weight, "semi-bold");
+        font-size: map-get($font-size, "xs");
+        color: map-get($colors, "paragraph-color");
+        text-align: center;
+      }
+    }
+    
+    &-controls {
+      @extend %flex-align-center;
+      text-align: center;
+      justify-content: center;
+      @include flex-gap(11px, false);
+      
+      div {
+        font-weight: map-get($font-weight, "semi-bold");
+      }
+    }
+
+    .line {
+      border: 1px solid map-get($colors, "border-color");
+      min-width: 15px;
+    }
+
+  }
+}

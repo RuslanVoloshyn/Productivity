@@ -1,0 +1,90 @@
+@use "sass:map";
+
+.accordion {
+  padding: 170px 0;
+
+  &__wraper-title {
+    text-align: center;
+
+    h6 {
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      margin-bottom: 68px;
+    }
+  }
+
+  .faq-accordion {
+    font-size: map-get($font-size, "md");
+
+    .question {
+      position: relative;
+      border-bottom: 1px solid #ccc;
+      padding: 15px 0;
+
+      &__icon {
+        position: absolute;
+        left: 0;
+        bottom: 77px;
+
+        &-bottom, &-midl {
+          position: absolute;
+          left: 0;
+          bottom: 19px;
+        }
+      }
+
+
+      p {
+        max-width: 400px;
+      }
+
+      a {
+        max-width: 195px;
+      }
+
+      input[type="checkbox"] {
+        display: none;
+
+        &:checked ~ .answer {
+          max-height: 1000px;
+          transition: max-height 0.5s ease-in;
+        }
+      }
+
+      label {
+        display: block;
+        cursor: pointer;
+
+        p, h6 {
+          margin: 0;
+          padding-left: 30px;
+          position: relative;
+        }
+
+        h6 {
+          font-weight: map-get($font-weight, "bold");
+        }
+
+        svg {
+          position: absolute;
+          left: 0;
+          bottom: 19px;
+        }
+      }
+
+      .answer {
+        @include flex-gap(68px, true);
+        align-items: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+
+        p {
+          padding: 10px;
+        }
+      }
+    }
+  }
+}

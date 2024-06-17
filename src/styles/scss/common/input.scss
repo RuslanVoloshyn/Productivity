@@ -1,0 +1,41 @@
+label {
+  display: inline-block;
+} 
+
+input {
+  border: none;
+  outline: none;
+  padding: 21px 23px;
+  background-color: map-get($colors, "inputs-bg");
+  color: map-get($colors, "inputs-color");
+  font-weight: map-get($font-weight, "bold");
+  font-size: map-get($font-size, "sm");
+  line-height: map-get($font-size, "sm");
+  border-radius: 5px;
+  transition: 0.3s;
+   
+  &:focus-visible {
+    outline: none;
+  }
+  
+  &::placeholder {
+    color: map-get($colors, "inputs-color");
+  }
+  
+  &.input-md {
+    min-width: 280px;
+  }
+  
+  &:disabled {
+    background-color: map-get($colors, "accent-font-color");
+    color: map-get($colors, "light-color");
+    
+    &::placeholder {
+      color: map-get($colors, "ilight-color");
+    }
+  }
+
+  &:focus, &:hover {
+    box-shadow: 0 0 13px -9px map-get($colors, "accent-color");
+}
+ }

@@ -1,0 +1,77 @@
+$base-fonts-path: "./../../fonts/";
+$base-assets-path: "./../../assets/images/";
+$font-stack: "Quicksand", "Roboto", sans-serif;
+$secondary-font-family: "Roboto", "Quicksand", sans-serif;
+$font-size: (
+        "xs": 11px,
+        "sm": 13px,
+        "md": 15px,
+        "lg": 18px,
+        "xl": 25px,
+        "xxl": 36px,
+        "xxxl":45px,
+);
+
+$font-weight: (
+        "small": 300,
+        "normal": 400,
+        "medium": 500,
+        "semi-bold": 600,
+        "bold": 700,
+);
+
+$colors: (
+        "accent-color": #5e81fe,
+        "accent-color-svg": #5982E7,
+        "light-color": #d2e1ff,
+        "dark-color": #6888ff,
+        "headers-color": #3d4f9f,
+        "main-font-color": #8d96bd,
+        "accent-font-color": #697ca6,
+        "main-color": #ffffff,
+        "bg-color": #f5f8ff,
+        "br-color": #d8e3fe,
+        "br-new-color": #fcfdff,
+        "btn-primary-color": #3a79ff,
+        "btn-base-color": #a6b6da,
+        "btn-danger-bg-color": #ffd7d7,
+        "btn-icon-bg-color": #4c85ff,
+        "btn-danger-color": #d43f3f,
+        "btn-secondary-color": #adb4d2,
+        "btn-gray-color": #e8ecf4,
+        "btn-white-color": #565f82,
+        "btn-font-color": #c7d3ff,
+        "shadow-color": #254e6a,
+        "secondare-color": #000000,
+        "title-color": #4074f8,
+        "paragraph-color": #adb3cb,
+        "socials-color": #b6bac7,
+        "border-color": #dae4fe,
+        "font-color": #5e80ff,
+        "app-right-bg": #e0e9ff,
+        "carosel-bg-color": #fdfdfd,
+        "cabg-color": #f3f6fd,
+        "carts-color": #f3f5fa,
+        "inputs-bg": #efeff7,
+        "inputs-color": #7a85ad,
+        "footer-font-color": #aeb8d0,
+        "gradient": linear-gradient(180deg, #eaf0ff 100%, #f6f9ff 100%),
+        "gradient-start": linear-gradient(229.32deg, #6888ff 12.77%, #5e80ff 73.11%)
+,
+
+);
+
+$content-width: (
+        "xl": 1200px,
+        "lg": 992px,
+        "md": 767px,
+        "sm": 577px,
+);
+
+$containers: (
+        "container": 1200px,
+        "container-xl": 992px,
+        "container-lg": 884px,
+        "container-md": 767px,
+        "container-sm": 577px,
+);

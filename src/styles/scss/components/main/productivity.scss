@@ -1,0 +1,56 @@
+.productivity {
+  padding: 66px 0;
+  position: relative;
+  
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: block;
+    z-index: -1;
+  }
+
+  &:before {
+    background-color: map-get($colors, "font-color");
+    left: 0;
+  }
+
+  &:after {
+    background-color: map-get($colors, "app-right-bg");
+    right: 0;
+  }
+  
+  &__wraper {
+    @include flex-gap(180px, false);
+    @extend %flex-between;
+  }
+
+  &__start, &__end {
+    @extend %flex-colum;
+    @include flex-gap(20px, false);
+    font-size: map-get($font-size, "lg");
+
+    p {
+      color: map-get($colors, "main-color");
+      width: 260px;
+    }
+
+    &-info {
+      font-size: map-get($font-size, "xxxl");
+    }
+  }
+
+  &__start {
+    text-align: right;
+  }
+
+  &__end p {
+    color: map-get($colors, "font-color");
+  }
+  
+  &__start, &__end {
+    width: calc(50% - (180px / 2));
+  }
+}

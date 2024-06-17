@@ -1,0 +1,14 @@
+.footer {
+  padding: 93px 0;
+  
+  &-wraper {
+    margin-bottom: 28px;
+  }
+  
+  &_author {
+    font-weight: map-get($font-weight, "medium");
+    line-height: map-get($font-size, "md");
+    color: map-get($colors, "footer-font-color");
+    margin-left: 98px;
+  }
+}

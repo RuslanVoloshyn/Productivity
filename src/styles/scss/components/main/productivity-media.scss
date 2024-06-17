@@ -1,0 +1,39 @@
+@media (max-width: 1200px) {
+  .container {
+    max-width: map-get($content-width, "lg");
+  }
+}
+
+@media (max-width: 992px) {
+
+  .container {
+    max-width: map-get($content-width, "md");
+  }
+
+
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: map-get($content-width, "sm");
+  }
+  .productivity__wraper {
+    p {
+      @include responsive-font(12px, 14px, 16px);
+    }
+
+    .productivity__start p, .productivity__end p {
+      width: 120px;
+    }
+
+    .productivity__start p {
+      margin-left: 70px;
+    }
+  }
+  
+
+}
+
+@media (max-width: 576px) {
+
+}

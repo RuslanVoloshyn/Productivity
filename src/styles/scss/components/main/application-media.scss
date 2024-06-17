@@ -1,0 +1,68 @@
+@media (max-width: 1200px) {
+  .container {
+    max-width: map-get($content-width, "lg");
+  }
+}
+
+@media (max-width: 992px) {
+
+  .container {
+    max-width: map-get($content-width, "md");
+  }
+
+
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: map-get($content-width, "sm");
+  }
+
+  .application {
+    padding: 25px 0;
+
+    &__wraper-title {
+      margin-bottom: 45px;
+
+      h6 {
+        @include responsive-font(9px, 11px, 13px);
+      }
+
+      h3 {
+        @include responsive-font(15px, 18px, 19px);
+      }
+
+    }
+
+    .application__wraper-app {
+      gap: 15px;
+      margin-bottom: 40px;
+      
+    }
+
+    &__wraper__app-carts {
+      gap: 15px;
+      flex-basis: 45%;
+
+      h6 {
+        @include responsive-font(9px, 11px, 12px);
+      }
+
+      p {
+        @include responsive-font(9px, 10px, 12px);
+      }
+    }
+
+    &__wraper-controls {
+      .btn {
+        padding: 6px 8px;
+      }
+    }
+
+  }
+}
+
+
+@media (max-width: 576px) {
+
+}

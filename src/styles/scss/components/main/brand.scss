@@ -1,0 +1,17 @@
+@use "sass:map";
+
+.brand {
+  &__wraper {
+    padding: 58px 0;
+    max-height: 146px;
+    ul {
+      @extend %flex-align-center;
+      @extend %flex-between;
+      @include flex-gap(76px, false);
+      
+      a:hover path {
+        fill: map-get($colors, "accent-color-svg");
+      }
+    }
+  }
+}

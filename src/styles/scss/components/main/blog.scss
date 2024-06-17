@@ -1,0 +1,89 @@
+@use "sass:map";
+
+.blog {
+  padding: 104px 0 179px;
+  background-color: map-get($colors, "cabg-color");
+
+  &__wraper {
+    
+    &-title {
+      text-align: center;
+      margin-bottom: 92px;
+
+      h6 {
+        margin-bottom: 20px;
+      }
+    }
+
+    &-info {
+      @extend %flex-between;
+      background-color: map-get($colors, "carosel-bg-color");
+      padding: 65px 35px;
+      position: relative;
+
+      .arrow-left, .arrow-right {
+        position: absolute;
+        top: 185px;
+        height: 3px;
+      }
+
+      .arrow-left {
+        left: -105px;
+      }
+
+      .arrow-right {
+        right: -105px;
+      }
+
+      .arrow-left, .arrow-right i {
+        font-size: map-get($font-size, "xxl");
+        cursor: pointer;
+      }
+
+      ul {
+        @include flex-gap(13px, true);
+        position: absolute;
+        bottom: -75px;
+        left: 457px;
+
+        img {
+          cursor: pointer;
+        }
+      }
+
+      &-img {
+        max-width: 407px;
+        @include flex-gap(13px, true);
+        margin-right: 70px;
+
+        &-colum img {
+          margin-bottom: 11px;
+        }
+      }
+
+      &-text {
+
+        h2 {
+          font-size: map-get($font-size, "xxl");
+          color: map-get($colors, "headers-color");
+          font-weight: map-get($font-weight, "small");
+          margin-bottom: 33px;
+        }
+
+        p {
+          max-width: 408px;
+          font-size: map-get($font-size, "md");
+          color: map-get($colors, "main-font-color");
+          font-family: $secondary-font-family;
+          font-weight: map-get($font-weight, "normal");
+          margin-bottom: 33px;
+        }
+
+        a {
+          margin-right: 8px;
+        }
+
+      }
+    }
+  }
+}

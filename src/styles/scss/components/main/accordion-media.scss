@@ -1,0 +1,42 @@
+@media (max-width: 1200px) {
+  .container {
+    max-width: map-get($content-width, "lg");
+  }
+}
+
+@media (max-width: 992px) {
+
+  .container {
+    max-width: map-get($content-width, "md");
+  }
+
+
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: map-get($content-width, "sm");
+  }
+
+  .accordion {
+    padding: 40px 0;
+    
+    .btn {
+      padding: 6px 8px;
+    }
+  }
+  
+  .accordion .faq-accordion .question p {
+    max-width: 300px;
+  }
+  .accordion .faq-accordion .question__icon {
+    position: absolute;
+    left: 0;
+    bottom: 93px;
+  }
+
+}
+
+@media (max-width: 576px) {
+  
+}

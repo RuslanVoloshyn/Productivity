@@ -1,0 +1,22 @@
+{
+  "name": "productivity",
+  "version": "1.0.0",
+  "description": "sass --watch ./src/styles/scss/home-page.scss:./src/styles/css/home-page.css",
+  "main": "index.html",
+  "scripts": {
+    "compile-home": "sass --watch ./src/styles/scss/home-page.scss:./src/styles/css/home-page.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RuslanVoloshyn/Productivity.git"
+  },
+  "author": "Ruslan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RuslanVoloshyn/Productivity/issues"
+  },
+  "homepage": "https://github.com/RuslanVoloshyn/Productivity#readme",
+  "dependencies": {
+    "bootstrap-icons": "^1.11.3"
+  }
+}

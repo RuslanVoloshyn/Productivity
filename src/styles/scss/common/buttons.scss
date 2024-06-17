@@ -1,0 +1,106 @@
+@use "sass:map";
+
+.btn {
+  border: 2px solid transparent;
+  background-color: transparent;
+  border-radius: 2px;
+  padding: 9px 11px;
+  margin: 0;
+  font-family: $font-stack;
+  font-weight: map-get($font-weight, "bold");
+  font-size: map-get($font-size, "sm");
+  line-height: normal;
+  color: map-get($colors, "btn-base-color");
+  cursor: pointer;
+  display: inline-block;
+  transition: box-shadow 0.3s;
+  border-radius: 5px;
+
+  &#{-primary} {
+    @include create-btn-styles(
+        map-get($colors, "light-color"), 
+        map-get($colors, "btn-primary-color"), 
+        map-get($colors, "light-color")
+    );
+  }
+
+  &#{-danger} {
+    @include create-btn-styles(
+        map-get($colors, "btn-danger-bg-color"),
+        map-get($colors, "btn-danger-color"),
+        map-get($colors, "btn-danger-bg-color")
+    );
+  }
+
+  &#{-icon} {
+    @include create-btn-styles(
+        map-get($colors, "btn-icon-bg-color"),
+        map-get($colors, "main-color"),
+        map-get($colors, "btn-icon-bg-color")
+    );
+    
+    &.rounded {
+      @include create-btn-styles(
+          map-get($colors, "main-color"),
+          map-get($colors, "accent-color"),
+          map-get($colors, "main-color")
+      );
+      border-radius: 50px;
+      box-shadow: 0 0 13px -9px map-get($colors, "accent-color");
+    }
+  }
+
+  &#{-secondary} {
+    @include create-btn-styles(
+        transparent,
+        map-get($colors, "btn-secondary-color"),
+        map-get($colors, "btn-secondary-color")
+    );
+    
+  }
+  &#{-transparent} {
+    @include create-btn-styles(
+        transparent,
+        map-get($colors, "btn-secondary-color"),
+         transparent
+    );
+  }
+  &#{-gray} {
+    @include create-btn-styles(
+        map-get($colors, "btn-gray-color"),
+        map-get($colors, "btn-secondary-color"),
+         transparent
+    );
+  }
+  &#{-white} {
+    @include create-btn-styles(
+        map-get($colors, "main-color"),
+        map-get($colors, "btn-white-color"),
+        transparent
+    );
+  }
+  &#{-grey} {
+    @include create-btn-styles(
+        transparent,
+        map-get($colors, "btn-font-color"),
+        map-get($colors, "btn-font-color")
+    );
+  }
+
+  &#{-xl} {
+  padding: 19px 60px;
+  }
+  
+  &#{-lg} {
+  padding: 11px 13px;
+  }
+  
+  &#{-md} {
+  padding: 7px 9px;
+  }
+  
+  &#{-sm} {
+  padding: 5px 7px;
+  }
+  
+}

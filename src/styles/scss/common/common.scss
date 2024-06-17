@@ -1,0 +1,53 @@
+@use "sass:map";
+
+body {
+  font: 100% $font-stack;
+  font-weight: normal;
+  font-style: normal;
+  font-size: map-get($font-size, "sm");
+  color: map-get($colors, "main-font-color");
+}
+
+.container, .container-sm, .container-md, .container-lg, .container-xl {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container {
+  max-width: map-get($containers, "container");
+}
+
+.container-xl {
+  max-width: map-get($containers, "container-xl");
+}
+
+.container-lg {
+  max-width: map-get($containers, "container-lg");
+}
+
+.container-md {
+  max-width: map-get($containers, "container-md");
+}
+
+.container-sm {
+  max-width: map-get($containers, "container-sm");
+}
+
+a {
+  display: inline-block;
+}
+
+.bordered {
+  border-bottom: 2px solid map-get($colors, "br-color");
+}
+
+h3, h5, h6 {
+  font-size: map-get($font-size, "xl");
+  font-weight: map-get($font-weight, "medium");
+  color: map-get($colors, "headers-color");
+}
+
+h5, h6 {
+  font-size: map-get($font-size, "xs");
+  font-family: $secondary-font-family;
+}

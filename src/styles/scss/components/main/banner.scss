@@ -1,0 +1,48 @@
+@use "sass:map";
+
+.banner {
+  $banner-height: 570px;
+  padding-top: 92px;
+  min-height: $banner-height;
+  max-height: $banner-height;
+  
+  background-image: url($base-assets-path + "images-svg/clouds-chart.svg");
+  background-position: center;
+  background-size: cover;
+
+  &__wraper {
+    text-align: center;
+
+    h5 {
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      max-width: 583px;
+      font-weight: 100;
+      font-size: map-get($font-size, "xxxl");
+      color: map-get($colors, "headers-color");
+      margin: 0 auto 28px;
+      
+
+      span {
+        color: map-get($colors, "headers-color");
+        font-weight: map-get($font-weight, "normal");
+      }
+    }
+
+    p {
+      max-width: 490px;
+      font-weight: map-get($font-weight, "normal");
+      font-size: map-get($font-size, "md");
+      color: map-get($colors, "main-font-color");
+      line-height: 30px;
+      margin: 0 auto 20px;
+    }
+  }
+  
+  &__description {
+    text-align: center;
+  }
+
+}

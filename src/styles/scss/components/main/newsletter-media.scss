@@ -1,0 +1,60 @@
+@media (max-width: 1200px) {
+  .container {
+    max-width: map-get($content-width, "lg");
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: map-get($content-width, "md");
+  }
+  .newsletter__wraper {
+
+    flex-wrap: wrap;
+    row-gap: 28px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: map-get($content-width, "md");
+  }
+
+  .newsletter {
+    padding: 30px 0;
+
+    &__wraper-title {
+      max-width: 207px;
+
+      h6 {
+        @include responsive-font(13px, 15px, 18px);
+      }
+
+      p {
+        @include responsive-font(9px, 11px, 13px);
+      }
+    }
+
+    &__wraper-form {
+
+      label {
+        padding-right: 7px;
+      }
+      
+      input.input-md {
+        min-width: 179px;
+        padding: 13px 11px;
+      }
+
+      .btn-xl {
+        padding: 11px 25px;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 576px) {
+  
+}

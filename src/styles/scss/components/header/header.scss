@@ -1,0 +1,70 @@
+@use "sass:map";
+
+.header {
+  padding: 21px 0;
+  max-height: 80px;
+
+  &__wrapper {
+    @extend %flex-between;
+
+    &-logo a {
+      $logo-dimensions: 26px;
+      width: $logo-dimensions;
+      height: $logo-dimensions;
+      background-color: map-get($colors, "accent-color");
+      border-radius: 50%;
+      transition: .3s box-shadow;
+      
+      &:hover {
+        box-shadow: 0 0 11px -3px map-get($colors, "secondare-color");
+      }
+    }
+
+    &-menu {
+      @extend %flex-align-center;
+      @include flex-gap(73px, false);
+    }
+
+    &-list {
+      @include flex-gap(42px, true);
+    }
+
+    &-controls {
+      @extend %flex-align-center;
+      @include flex-gap(15px, false);
+
+      ul {
+        @include flex-gap(25px, true);
+        align-items: end;
+
+        a {
+          font-size: map-get($font-size, "lg");
+          font-weight: map-get($font-weight, "bold");
+          color: map-get($colors, "socials-color");
+          
+          &:hover {
+            color: map-get($colors, "accent-color");
+          }
+        }
+      }
+
+
+    }
+  }
+
+  &__link {
+    font-weight: map-get($font-weight, "medium");
+    color: map-get($colors, "accent-font-color");
+    transition: 0.3s;
+
+    &:not(.header__active):hover {
+      color: map-get($colors, "accent-color");
+    }
+  }
+
+  &__active {
+    font-weight: map-get($font-weight, "bold");
+    color: map-get($colors, "accent-color");
+  }
+
+}

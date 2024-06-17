@@ -1,0 +1,43 @@
+@use "sass:map";
+.start {
+  background: map-get($colors, 'gradient-start');
+  padding: 91px 0;
+  color: map-get($colors, "main-color");
+  @extend %flex-colum;
+  align-items: center;
+  text-align: center;
+
+  &__wraper-title {
+    h6 {
+      font-weight: map-get($font-weight, "medium");
+      margin-bottom: 16px;
+      color: map-get($colors, "main-color");
+    }
+
+    h3, p {
+      margin-bottom: 28px;
+      font-weight: map-get($font-weight, "small");
+      font-size: map-get($font-size, "xxxl");
+      color: map-get($colors, "main-color");
+
+      span {
+
+        font-weight: map-get($font-weight, "medium");
+      }
+    }
+
+    p {
+      max-width: 615px;
+      font-family: $secondary-font-family;
+      font-size: map-get($font-size, "md");
+      line-height: map-get($font-size, "xl");
+      font-weight: map-get($font-weight, "normal");
+    }
+  }
+  
+  &__wraper-controls {
+    a {
+      margin-right: -4px;
+    }
+  }
+}

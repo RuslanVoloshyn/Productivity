@@ -1,0 +1,41 @@
+@media (max-width: 1200px) {
+  .container {
+    max-width: map-get($content-width, "lg");
+  }
+}
+
+@media (max-width: 992px) {
+
+  .container {
+    max-width: map-get($content-width, "md");
+  }
+
+  .brand__wraper ul {
+    gap: 15px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: map-get($content-width, "md");
+  }
+
+  .brand__wraper {
+    padding: 25px 0;
+    max-height: 100%;
+
+    ul {
+      gap: 27px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+ 
+  
+}
+
+@media (max-width: 576px) {
+
+}

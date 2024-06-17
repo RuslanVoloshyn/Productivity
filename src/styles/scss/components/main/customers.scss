@@ -1,0 +1,67 @@
+@use "sass:map";
+
+.customers {
+  background: map-get($colors, "gradient");
+  padding: 147px 0 210px;
+  position: relative;
+  overflow: hidden;
+  
+  &__wraper {
+    
+    &-title {
+      max-width: 333px;
+      
+      h6 {
+        margin-bottom: 31px;
+      }
+      
+      h3 {
+        font-size: map-get($font-size, "xxl");
+        margin-bottom: 15px;
+      }
+      
+      p {
+        
+        font-weight: map-get($font-weight, "semi-bold");
+      }
+    }
+    
+    &-info {
+      display: flex;
+      gap: 64px;
+      position: absolute;
+      right: -225px;
+      top: 147px;
+      
+      ul {
+        @include flex-gap(13px, true);
+        position: absolute;
+        bottom: -80px;
+        left: 108px;
+      }
+      
+      &-item {
+        background-color: map-get($colors, "main-color");
+        max-width: 423px;
+        padding: 41px 71px 53px 69px;
+        position: relative;
+        
+        p {
+          font-family: $secondary-font-family;
+          font-size: map-get($font-size, "md");
+        }
+
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50px, 50px);
+        }
+      }
+      
+      .item-carts {
+        background-color: map-get($colors, "carts-color");
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@media (max-width: 1200px) {
+  .container {
+    max-width: map-get($content-width, "lg");
+  }
+}
+
+@media (max-width: 992px) {
+
+  .container {
+    max-width: map-get($content-width, "md");
+  }
+  .banner {
+    &__description {
+      h5 {
+        @include responsive-font(11px, 13px, 15px);
+      }
+
+      h1 {
+        @include responsive-font(27px, 31px, 36px);
+      }
+      
+      p {
+        @include responsive-font(11px, 13px, 15px);
+      }
+    }
+  }
+
+
+
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: map-get($content-width, "sm");
+  }
+
+  .banner {
+    padding-top: 25px;
+    min-height: 370px;
+    background-size: auto;
+    
+  }
+}
+
+@media (max-width: 576px) {
+
+}

@@ -1,0 +1,51 @@
+@use "sass:map";
+
+.planner {
+  background-color: map-get($colors, "bg-color");
+  padding: 170px 0 0 0;
+  
+  &__wraper {
+    display: flex;
+    justify-content: right;
+    
+    
+    &-info {
+     @extend %flex-colum;
+      gap: 27px;
+      
+      h6 {
+        font-weight: map-get($font-weight, "medium");
+        color: map-get($colors, "headers-color");
+        
+      }
+      
+      h2 {
+        width: 299px;
+        font-weight: map-get($font-weight, "normal");
+        font-size: map-get($font-size, "xxl");
+        
+        span {
+          color: map-get($colors, "headers-color");
+          font-weight: map-get($font-weight, "medium");
+        }
+      }
+      
+      p {
+        width: 413px;
+        font-weight: map-get($font-weight, "normal");
+        font-size: map-get($font-size, "md");
+        color: map-get($colors, "main-font-color");
+        margin-bottom: 20px;
+      }
+      
+      a {
+        margin-right: -4px;
+      }
+    }
+    
+    &-img {
+      max-width: 653px;
+      
+    }
+  }
+}

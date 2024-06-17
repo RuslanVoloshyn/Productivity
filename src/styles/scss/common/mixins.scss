@@ -1,0 +1,36 @@
+@use "sass:map";
+
+@mixin create-btn-styles($background, $color, $border-color, $box-shadow-dim:0 1px 2px 0) {
+  background-color: $background;
+  color: $color;
+  border-color: $border-color;
+
+  &:focus, &:hover {
+    @if $color == #ffffff{
+      box-shadow: $box-shadow-dim $background; 
+    }@else {
+      box-shadow: $box-shadow-dim $color;
+    }
+  }
+}
+
+@mixin flex-gap($gap: false, $is-flexible: true) {
+  @if gap != false {
+    gap: $gap;
+  }
+  @if $is-flexible != false {
+    display: flex;
+  }
+} 
+
+@mixin responsive-font($small, $medium, $large) {
+  font-size: $small;
+
+  @media (min-width: 576px) {
+    font-size: $medium;
+  }
+
+  @media (min-width: 768px) {
+    font-size: $large;
+  }
+}

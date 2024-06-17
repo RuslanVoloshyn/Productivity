@@ -1,0 +1,16 @@
+@use "sass:map";
+
+%flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+%flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+%flex-colum {
+  display: flex;
+  flex-direction: column;
+}
